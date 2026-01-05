@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ記録 (API版)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>アニメ視聴記録</h1>
+
+        <div class="search-area">
+            <input type="text" id="query" placeholder="アニメのタイトルで検索...">
+            <button id="searchBtn">検索</button>
+        </div>
+
+        <div id="searchResults" class="results-grid"></div>
+
+        <hr>
+
+        <div class="list-header">
+            <h2>My リスト</h2>
+            <div class="sort-area">
+                <button onclick="sortList('title')">名前順</button>
+                <button onclick="sortList('date')">日付順</button>
+            </div>
+        </div>
+        <ul id="animeList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+:root {
+    --primary: #6366f1;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --placeholder: #e2e8f0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 20px;
+    color: #334155;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-section {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-main {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-main:hover {
+    background: #4f46e5;
+}
+
+.btn-manual {
+    background: #64748b;
+    color: white;
+}
+
+#search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search-item {
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.search-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#manual-form {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.anime-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.anime-card {
+    display: flex;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.anime-card img,
+.no-image-placeholder {
+    width: 120px;
+    height: 170px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.no-image-placeholder {
+    background: var(--placeholder);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #94a3b8;
+}
+
+.anime-info {
+    padding: 15px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.anime-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.anime-date {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.memo-edit {
+    width: 100%;
+    border: 1px solid transparent;
+    background: #f1f5f9;
+    resize: none;
+    font-size: 13px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #475569;
+    height: 60px;
+}
+
+.memo-edit:focus {
+    background: #fff;
+    border-color: var(--primary);
+    outline: none;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #fee2e2;
+    color: var(--danger);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: white;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自分のアニメ記録-GitHub</title>
+    <title>自分のアニメ記録</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,26 +13,23 @@
     <div class="container">
         <header>
             <h1>自分のアニメ記録</h1>
-            <p>見たアニメを記録しておこう！</p>
+            <p>見たアニメを記録しておこう</p>
         </header>
 
         <section class="search-section">
             <div class="input-group">
-                <input type="text" id="search-input" placeholder="アニメタイトルを入力..."
+                <input type="text" id="search-input" placeholder="アニメのタイトルを入力..."
                     onkeypress="if(event.key === 'Enter') searchAnime()">
                 <button class="btn-main" onclick="searchAnime()">APIで検索</button>
-                <button class="btn-manual" onclick="toggleManualForm()">自分で入力</button>
+                <button class="btn-manual" onclick="toggleManualForm()">手動で追加</button>
             </div>
-
             <div id="search-results"></div>
-
             <div id="manual-form">
-                <h4>詳細（任意）</h4>
+                <h4>手動で詳細を入力</h4>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
                     <input type="text" id="m-title" placeholder="タイトル">
-                    <input type="text" id="m-date" placeholder="放送開始日 (例: 2025/10/13)">
+                    <input type="text" id="m-date" placeholder="放送時期 (例: 2024年10月)">
                     <input type="text" id="m-img" placeholder="画像URL">
-                    <textarea id="m-memo" placeholder="一言メモ"></textarea>
                     <button class="btn-main" onclick="addAnimeManual()">リストに追加</button>
                 </div>
             </div>
@@ -43,14 +40,13 @@
                 <select id="sort-select" onchange="renderList()">
                     <option value="newest">登録が新しい順</option>
                     <option value="oldest">登録が古い順</option>
-                    <option value="date_desc">放送時期が新しい順</option>
-                    <option value="date_asc">放送時期が古い順</option>
                     <option value="title">タイトル順</option>
+                    <option value="watched_desc">見た年月が新しい順</option>
+                    <option value="watched_asc">見た年月が古い順</option>
                 </select>
             </label>
             <div id="count">合計: 0作品</div>
         </div>
-
         <div id="anime-list" class="anime-list"></div>
     </div>
 
